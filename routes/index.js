@@ -12,12 +12,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', {
     title: 'Jam Session',
-    host: req.headers.host,
-    sounds: [
-      { mp3: 'kick.mp3', title: 'Kick' },
-      { mp3: 'snare.mp3', title: 'Snare' },
-      { mp3: 'keys.mp3', title: 'Keys' }
-    ]
+    host: req.headers.host
   });
 });
 

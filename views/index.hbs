@@ -1,7 +1,18 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<p>Pick your instrument:</p>
 
-{{#each sounds}}
-<button class="sound" data-mp3="{{mp3}}">{{title}}</button>
-<br />
-{{/each}}
+<select id='sound'>
+	<option value='0' selected=''>Keyboard</option>
+	<option value='1'>Organ</option>
+    <option value='2'>Acoustic Guitar</option>
+    <option value='3'>EDM</option>
+</select>
+
+<div id='keyboard' class='keyboard-holder'></div>
+
+<div class='keyboard-options'>
+    Range [C<span id='OCTAVE_LOWER'>3</span>-B<span id='OCTAVE_UPPER'>5</span>]
+    <input type='button' id='-_OCTAVE' value='-'>
+    <input type='button' id='+_OCTAVE' value='+'><br>
+    <i>(Use left/right arrows to adjust with keyboard)</i>
+</div>

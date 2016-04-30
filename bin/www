@@ -27,8 +27,9 @@ var io = require('socket.io')(server);
 io.on('connection', function(socket) {
   debug('Connected!');
 
-  socket.on('soundPressed', function (sound) {
-    io.sockets.emit('playSound', sound);
+  socket.on('pressNote', function(data) {
+    debug('pressNote', data);
+    io.sockets.emit('playNote', data);
   });
 
   socket.on('disconnect', function() {
