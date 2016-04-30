@@ -25,18 +25,14 @@ var server = http.createServer(app);
  */
 var io = require('socket.io')(server);
 io.on('connection', function(socket) {
-  socket.emit('ping', { text: 'Hello, world!' });
+  debug('Connected!');
 
-  var interval = setInterval(function() {
-    socket.emit('ping', { text: new Date() });
-  }, 1000);
-  
   socket.on('soundPressed', function (sound) {
     io.sockets.emit('playSound', sound);
   });
 
   socket.on('disconnect', function() {
-    clearInterval(interval);
+    debug('Disconnected!');
   });
 });
 
