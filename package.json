@@ -3,6 +3,13 @@
   "description": "A realtime web application for musical jam sessions.",
   "version": "0.0.0",
   "author": "Mark <mark@remarkablemark.org>",
+  "contributors": [{
+    "name": "Mark",
+    "email": "mark@remarkablemark.org"
+  }, {
+    "name": "skratchdot",
+    "email": "git@skratchdot.com"
+  }],
   "scripts": {
     "start": "nodemon ./bin/www"
   },
