@@ -1,18 +1,23 @@
-(function(window, socket, $){
+(function(window, socket, $, Tone) {
+  'use strict';
+
   socket.on('connect', function() {
     console.log('Connected!');
   });
-  socket.on('ping', function(ping) {
-    //console.log(ping);
-  });
+
   socket.on('playSound', function (sound) {
-    console.log('playSound!', sound);
+    var player = new Tone.Player({
+      url : '/sounds/ff-064.wav',
+      autostart: true
+    }).toMaster();
+    Tone.Buffer.on('load', function () {
+      player.start();
+    });
   });
+
   $(document).ready(function () {
-    console.log('ready!!!');
     $('.sound').on('click', function () {
-      console.log('click!!', arguments, $(this).data('mp3'));
       socket.emit('soundPressed', $(this).data('mp3'));
     });
   });
-})(window, window.socket, window.jQuery);
+})(window, window.socket, window.jQuery, window.Tone);
