@@ -1,0 +1,19 @@
+{
+  "name": "jam-session",
+  "description": "A realtime web application for musical jam sessions.",
+  "version": "0.0.0",
+  "author": "Mark <mark@remarkablemark.org>",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "hbs": "~3.1.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  }
+}
