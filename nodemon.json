@@ -1,0 +1,9 @@
+{
+  "restartable": "rs",
+  "ignore": [
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js json"
+}
