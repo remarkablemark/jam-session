@@ -30,6 +30,10 @@ io.on('connection', function(socket) {
   var interval = setInterval(function() {
     socket.emit('ping', { text: new Date() });
   }, 1000);
+  
+  socket.on('soundPressed', function (sound) {
+    io.sockets.emit('playSound', sound);
+  });
 
   socket.on('disconnect', function() {
     clearInterval(interval);
