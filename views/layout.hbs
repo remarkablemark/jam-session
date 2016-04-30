@@ -6,5 +6,9 @@
   </head>
   <body>
     {{{body}}}
+    <script src='//cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js'></script>
+    <script>window.socket = window.io.connect('{{host}}');</script>
+    <script src='/js/script.js'></script>
+    </script>
   </body>
 </html>
