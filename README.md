@@ -2,6 +2,8 @@
 
 A realtime web application for musical jam sessions.
 
+See [demo](https://live-jam-session.herokuapp.com/).
+
 ## Install
 
 ```sh
